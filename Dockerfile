@@ -1,0 +1,1 @@
+FROM touchify/beanstalkd:latest
