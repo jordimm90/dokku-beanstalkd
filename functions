@@ -103,7 +103,7 @@ service_create_container() {
   fi
 
   # shellcheck disable=SC2086
-  suppress_output "$DOCKER_BIN" container create "${DOCKER_ARGS[@]}" "$PLUGIN_IMAGE:$PLUGIN_IMAGE_VERSION" $CONFIG_OPTIONS
+  suppress_output "$DOCKER_BIN" container create "${DOCKER_ARGS[@]}" "$PLUGIN_IMAGE:$PLUGIN_IMAGE_VERSION" $CONFIG_OPTIONS -b /var/cache/beanstalkd
 
   if [[ -n "$(fn-plugin-property-get "$PLUGIN_COMMAND_PREFIX" "$SERVICE" "post-create-network")" ]]; then
     dokku_log_verbose_quiet "Connecting to networks after container create"
