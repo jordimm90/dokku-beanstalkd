@@ -1,1 +1,1 @@
-FROM touchify/beanstalkd:latest
+FROM maateen/docker-beanstalkd:latest
