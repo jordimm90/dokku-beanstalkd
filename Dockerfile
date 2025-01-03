@@ -1,1 +1,1 @@
-FROM schickling/beanstalkd
+FROM schickling/beanstalkd:latest
