@@ -1,1 +1,1 @@
-FROM schickling/beanstalkd:latest
+FROM --platform=linux/amd64 schickling/beanstalkd:latest
